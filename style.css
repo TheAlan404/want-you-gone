@@ -1,0 +1,156 @@
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: repeating-linear-gradient(0deg, #00000050 3px, transparent 5px);
+  pointer-events: none;
+}
+
+#outer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: auto;
+  width: 100%;
+  height: 100%;
+}
+
+
+#frame {
+  display: flex;
+  aspect-ratio: 16/8;
+  width: 80%;
+  text-align: left;
+  position: absolute;
+  
+  border-image-slice: 1;
+  border-image-source: radial-gradient(#70550f, orange);
+  border-width: 0.15rem;
+  border-style: solid;
+  box-sizing: border-box;
+}
+
+#all {
+	margin: 1em;
+	padding: 1em;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	/* height: 100%; */
+}
+
+#content {
+  color: #d09c3c;
+  text-shadow: none;
+}
+
+#credits {
+	position: absolute;
+	/* top: 10%; */
+	right: 0;
+	/* z-index: -1; */
+	/* padding: 2rem; */
+	text-align: end;
+	color: #150f02;
+	/* overflow: hidden; */
+	/* display: flex; */
+	/* height: 100%; */
+	bottom: 0;
+}
+
+#creditswrapper {
+	bottom: 0;
+	height: 100%;
+	overflow-y: clip;
+	/* justify-content: end; */
+	display: flex;
+	position: absolute;
+	/* left: 0; */
+	/* right: 0; */
+	width: fit-content;
+}
+
+#stuffwrapper {
+  position: absolute;
+  top: -2em;
+  right: 0;
+  z-index: 5;
+  box-shadow: 0 0 0 2px white;
+}
+
+#stuff1 #stuff2 #stuff3 {
+  border-image-slice: 1;
+  border-image-source: radial-gradient(#70550f, orange);
+  border-width: 0.15rem;
+  border-style: solid;
+  box-sizing: border-box;
+}
+
+.apperture {
+  width: 4em;
+  height: 4em;
+  
+  border-image-slice: 1;
+  border-image-source: radial-gradient(#70550f, orange);
+  border-width: 0.15rem;
+  border-style: solid;
+  box-sizing: border-box;
+}
+
+
+.slideanim {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(0deg, rgba(205, 147, 21, 0.1), rgba(205, 147, 21, 0.005), #00000000);
+  animation: 10s linear slide infinite;
+}
+
+.slideanim:nth-child(1) { animation-delay: 0s }
+.slideanim:nth-child(2) { animation-delay: 2s }
+.slideanim:nth-child(3) { animation-delay: 4s }
+.slideanim:nth-child(4) { animation-delay: 6s }
+.slideanim:nth-child(5) { animation-delay: 8s }
+
+@keyframes slide {
+  from {
+    margin-top: -100%;
+  }
+
+  to {
+    margin-top: 300%;
+  }
+}
+
+::selection {
+  background: #0080ff;
+  text-shadow: none;
+}
+
+body {
+  background-color: black;
+  /* 92, 56, 17*/
+  background-image: radial-gradient(rgba(205, 147, 21, 0.75), black 120%);
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  
+  color: white;
+  font: 1.3rem Inconsolata, monospace;
+  /*text-shadow: 0 0 5px #c8c8c8; */
+}
+
+audio {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  width: 25%;
+}
