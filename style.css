@@ -79,7 +79,6 @@ body::after {
   top: -2em;
   right: 0;
   z-index: 5;
-  box-shadow: 0 0 0 2px white;
 }
 
 #stuff1 #stuff2 #stuff3 {
